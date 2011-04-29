@@ -1,0 +1,76 @@
+<h1>Html 5 forms for rails 3.</h1>
+<p>
+  This is demo for <a href="#">html5forms</a> project. It allows
+  you to generate rich html 5 forms out of
+  your <code>ActiveModel</code> classes. They will be validated on client side.
+</p>
+<p>
+  For example you have model that is described by following code:
+</p>
+
+<script src="https://gist.github.com/947973.js"> </script>
+<p>
+  Default ruby <code>form_for</code> helper will generate simple <code>input</code> tags. But if you will add <b>Html5Forms</b> to you gem file it will generate following form:
+</p>
+  
+<section class="grid_4 alpha" >
+
+<%= form_for(@registration_information) do |f| %>
+  <% if @registration_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration_information.errors.count, "error") %> prohibited this registration_information from being saved:</h2>
+
+      <ul>
+      <% @registration_information.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="check_box">
+    <img src="/images/ast.png" class="" alt="(required)" />
+    <%= f.label :terms_of_service %>
+    <%= f.check_box :terms_of_service %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</section>
+<section class="grid_8">
+  <ul id="code_blocks">
+    <li><code>&lt;input id="registration_information_name" name="registration_information[name]" required="required" size="30" title="can't be blank" type="text" /&gt;</code></li>
+    <li><code>&lt;input id="registration_information_password" name="registration_information[password]" required="required" size="30" title="can't be blank" type="password" /></code></li>
+    <li><code>&lt;input id="registration_information_email" name="registration_information[email]" pattern="^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$" required="required" size="30" title="Enter corect email address!" type="email" /></code></li>
+    <li><code>&lt;input id="registration_information_age" name="registration_information[age]" pattern="18|19| ... |299|300" required="required" size="30" title="You must be from 18 to 300 years old!" type="text" /></code></li>
+    <li><code>&lt;input id="registration_information_phone" name="registration_information[phone]" pattern="[0-9]{7}" required="required" size="30" title="Only 7 didgits phone numbers supported!" type="text" /></code></li>
+    <li><code>&ltinput id="registration_information_terms_of_service" name="registration_information[terms_of_service]" required="required" title="must be accepted" type="checkbox" value="1" /></code></li>
+    
+  </ul>
+
+</section>

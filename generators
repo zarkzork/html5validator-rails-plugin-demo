@@ -1,0 +1,1 @@
+rails g scaffold registration_information name:string password:string email:string age:integer phone:string description:string anti_bot_check:string

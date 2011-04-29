@@ -1,0 +1,46 @@
+<article class="grid_8">
+
+
+<h1>Html 5 forms for rails 3.</h1>
+<p>
+  This is demo for <a href="#">%projectname%</a> project. It allows
+  you to generate rich html 5 forms out of
+  your <code>ActiveModel</code> classes.
+</p>
+<p>
+  For example you have following model:
+</p>
+<pre>
+  <code>
+    class Post < ActiveRecord::Base
+      validates_presence_of :title
+    end    
+  </code>
+</pre>
+<%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</article>

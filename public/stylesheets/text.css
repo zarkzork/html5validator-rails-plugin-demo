@@ -1,0 +1,132 @@
+/* base text styles */
+
+img{vertical-align: middle}
+
+body{
+    font-family: helvetica, arial, sans;
+    line-height: 1.3;    
+    font-size: 16px;
+    margin-top: 60px;
+    color: #333;
+    background-color: #fafafa;
+    
+}
+
+h1{
+    font-weight: normal;
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+*:focus{
+outline:none; /* Prevents blue border in Webkit */
+} 
+
+*::-moz-focus-inner{
+    border: 0 none;
+}
+
+.field{
+    margin-bottom: 10px;
+}
+
+.actions{
+    margin-top: 40px;
+}
+
+
+label:after{
+    content:':';
+}
+
+/*
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, rgb(238,238,238))
+        color-stop(1, rgb(255,255,255)),
+    );
+    background:-moz-linear-gradient(center top , #EEEEEE, #FFFFFF) repeat scroll 0 0 transparent;
+*/
+
+textarea, input{
+    background-color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border:1px solid #ccc;
+    width:300px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #eee;
+
+    border:1px solid #aaa;
+    padding:4px 7px;
+}
+
+input[type=submit], input[type=button], button, .button{
+-moz-border-radius:3px 3px 3px 3px;
+-webkit-border-radius:3px 3px 3px 3px;
+border-radius:3px 3px 3px 3px;
+-webkit-border-radius:1px 1px 2px #FFFFFF inset, 0 0 2px #AAAAAA;
+border-radius:1px 1px 2px #FFFFFF inset, 0 0 2px #AAAAAA;
+background-color: #eee;
+background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgb(238,238,238)),
+    color-stop(1, rgb(204,204,204))
+);
+background-image:-moz-linear-gradient(center top , #fff, #CCCCCC);
+border:1px solid #aaa;
+color:inherit;
+font-family:inherit;
+font-size:inherit;
+margin:0;
+padding: 3px 7px;
+text-decoration:none;pp
+vertical-align:middle;
+width: 317px;
+}
+
+input[type=checkbox]{
+    width: 20px;
+    vertical-align: middle;
+}
+
+input:required, textarea:required {
+    background: url("/images/ast.png") no-repeat 290px 6px;
+}
+
+input[type=text]:valid, input[type=email]:valid, textarea:valid {
+    background:url("/images/accept.png") no-repeat 290px 6px;			
+}		
+
+input[type=text]:focus:invalid, textarea:focus:invalid {
+    background:url("/images/cancel.png") no-repeat 290px 6px;
+    color: red;
+}
+
+textarea{
+    height: 200px;
+}
+
+article{
+    margin-bottom: 200px;
+}
+
+li code{
+    font-size: 12px;
+}
+
+li{ margin-bottom: 15px; margin-top: 14px; margin-left: 10px; background: #eee;
+  padding: 3px;}

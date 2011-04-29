@@ -1,0 +1,35 @@
+<h1>Listing registration_informations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th>Anti bot check</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registration_informations.each do |registration_information| %>
+  <tr>
+    <td><%= registration_information.name %></td>
+    <td><%= registration_information.password %></td>
+    <td><%= registration_information.email %></td>
+    <td><%= registration_information.age %></td>
+    <td><%= registration_information.phone %></td>
+    <td><%= registration_information.description %></td>
+    <td><%= registration_information.anti_bot_check %></td>
+    <td><%= link_to 'Show', registration_information %></td>
+    <td><%= link_to 'Edit', edit_registration_information_path(registration_information) %></td>
+    <td><%= link_to 'Destroy', registration_information, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registration information', new_registration_information_path %>

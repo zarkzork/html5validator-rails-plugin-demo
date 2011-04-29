@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @registration_information.name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @registration_information.password %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @registration_information.email %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @registration_information.age %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @registration_information.phone %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @registration_information.description %>
+</p>
+
+<p>
+  <b>Anti bot check:</b>
+  <%= @registration_information.anti_bot_check %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_information_path(@registration_information) %> |
+<%= link_to 'Back', registration_informations_path %>
