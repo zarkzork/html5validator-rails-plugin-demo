@@ -107,11 +107,17 @@ input:required, textarea:required {
     background: url("/images/ast.png") no-repeat 290px 6px;
 }
 
-input[type=text]:valid, input[type=email]:valid, textarea:valid {
+input[type=text]:valid,
+input[type=password]:valid,
+input[type=email]:valid,
+textarea:valid {
     background:url("/images/accept.png") no-repeat 290px 6px;			
 }		
 
-input[type=text]:focus:invalid, textarea:focus:invalid {
+input[type=text]:focus:invalid,
+input[type=password]:focus:invalid,
+input[type=email]:focus:invalid,
+textarea:focus:invalid {
     background:url("/images/cancel.png") no-repeat 290px 6px;
     color: red;
 }
